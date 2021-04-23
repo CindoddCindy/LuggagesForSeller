@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        app:cardMaxElevation="5dp"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="2dp">
+        <LinearLayout
+            android:background="@color/cardview_shadow_end_color"
+            android:layout_margin="3dp"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:padding="5dp"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_weight="1"
+                    android:shadowColor="#F1F5F6"
+                    android:shadowRadius="2"
+                    android:shadowDx="1"
+                    android:shadowDy="1"
+                    android:textColor="#070707"
+                    android:layout_marginTop="5dp"
+                    android:textSize="12dp"
+                    android:textStyle="bold"
+                    android:gravity="left"
+                    android:drawablePadding="5dp"
+                    android:text="Asal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                </TextView>
+                <TextView
+                    android:layout_weight="1"
+                    android:shadowColor="#F1F5F6"
+                    android:shadowRadius="2"
+                    android:shadowDx="1"
+                    android:shadowDy="1"
+                    android:textColor="#070707"
+                    android:layout_marginTop="5dp"
+                    android:textSize="12dp"
+                    android:textStyle="normal"
+                    android:gravity="center"
+                    android:drawablePadding="5dp"
+                    android:text="ke"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                </TextView>
+                <TextView
+                    android:layout_weight="1"
+                    android:shadowColor="#F1F5F6"
+                    android:shadowRadius="2"
+                    android:shadowDx="1"
+                    android:shadowDy="1"
+                    android:textColor="#070707"
+                    android:layout_marginTop="5dp"
+                    android:textSize="12dp"
+                    android:textStyle="bold"
+                    android:gravity="left"
+                    android:drawablePadding="5dp"
+                    android:text="Tujuan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                </TextView>
+
+
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="#100F0F"
+                    android:layout_marginTop="5dp"
+                    android:textSize="12dp"
+                    android:textStyle="normal"
+                    android:gravity="left"
+                    android:drawablePadding="5dp"
+                    android:text="Tanggal Berangkat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                </TextView>
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="#100F0F"
+                    android:layout_marginTop="5dp"
+                    android:textSize="12dp"
+                    android:textStyle="normal"
+                    android:gravity="left"
+                    android:drawablePadding="5dp"
+                    android:text="Tanggal Tiba"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                </TextView>
+
+
+            </LinearLayout>
+            <ImageView
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/garis_tebal">
+
+
+            </ImageView>
+
+
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:padding="5dp"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_margin="3dp"
+                    android:drawableLeft="@drawable/ic_baseline_perm_identity_24"
+                    android:layout_weight="1"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="#100F0F"
+                    android:layout_marginTop="5dp"
+                    android:textSize="12dp"
+                    android:textStyle="normal"
+                    android:gravity="center"
+                    android:drawablePadding="5dp"
+                    android:text="Nama Penjual"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                </TextView>
+                <TextView
+                    android:layout_margin="3dp"
+                    android:drawableLeft="@drawable/ic_baseline_monetization_on_24"
+                    android:layout_weight="1"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="#100F0F"
+                    android:layout_marginTop="5dp"
+                    android:textSize="12dp"
+                    android:textStyle="normal"
+                    android:gravity="center"
+                    android:drawablePadding="5dp"
+                    android:text="Harga Bagasi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                </TextView>
+                <TextView
+                    android:layout_margin="3dp"
+                    android:drawableLeft="@drawable/ic_baseline_approval_24"
+                    android:layout_weight="1"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="#100F0F"
+                    android:layout_marginTop="5dp"
+                    android:textSize="12dp"
+                    android:textStyle="normal"
+                    android:gravity="center"
+                    android:drawablePadding="5dp"
+                    android:text="Berat Bagasi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                </TextView>
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>
