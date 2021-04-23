@@ -15,10 +15,10 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
             <LinearLayout
-                android:background="@drawable/order_header"
+                android:background="@drawable/input_payment_header"
                 android:layout_weight="1"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="250dp"
                 android:orientation="vertical">
 
             </LinearLayout>
