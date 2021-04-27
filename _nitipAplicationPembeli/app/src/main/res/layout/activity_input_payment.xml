@@ -635,7 +635,7 @@
                 </TextView>
 
                 <EditText
-                    android:id="@+id/et_pay_in_tf_by_nama_pengirim"
+                    android:id="@+id/et_pay_in_by_tf_nama_pengirim"
                     android:padding="3dp"
                     android:layout_marginBottom="10dp"
                     android:layout_marginTop="5dp"
@@ -669,7 +669,7 @@
                 </TextView>
 
                 <EditText
-                    android:id="@+id/et_pay_in_tf_bank_asal"
+                    android:id="@+id/et_pay_in_by_tf_bank_asal"
                     android:padding="3dp"
                     android:layout_marginBottom="10dp"
                     android:layout_marginTop="5dp"
@@ -703,7 +703,7 @@
                 </TextView>
 
                 <EditText
-                    android:id="@+id/et_pay_in_tf_by_tgal_tf"
+                    android:id="@+id/et_pay_in_by_tf_tgal_tf"
                     android:padding="3dp"
                     android:layout_marginBottom="10dp"
                     android:layout_marginTop="5dp"
@@ -737,7 +737,7 @@
                 </TextView>
 
                 <EditText
-                    android:id="@+id/et_pay_in_tf_by_jumlah_uang"
+                    android:id="@+id/et_pay_in_by_tf_jumlah_uang"
                     android:padding="3dp"
                     android:layout_marginBottom="10dp"
                     android:layout_marginTop="5dp"
@@ -753,6 +753,7 @@
 
 
                 <TextView
+                    android:id="@+id/tv_pay_in_btn_bayar"
                     android:layout_marginBottom="15dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginLeft="10dp"
