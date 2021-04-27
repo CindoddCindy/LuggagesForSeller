@@ -58,13 +58,14 @@
 
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/cv_lugg_av"
                     app:cardMaxElevation="5dp"
                     android:layout_margin="5dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:cardElevation="2dp">
                     <LinearLayout
-                        android:background="#DEDFDE"
+                        android:background="@color/cardview_shadow_end_color"
                         android:layout_margin="3dp"
                         android:padding="10dp"
                         android:layout_width="match_parent"
@@ -77,6 +78,7 @@
                             android:layout_height="wrap_content"
                             android:orientation="horizontal">
                             <TextView
+                                android:id="@+id/id_tv_book_item_lugg_asal"
                                 android:layout_weight="1"
                                 android:shadowColor="#F1F5F6"
                                 android:shadowRadius="2"
@@ -113,6 +115,7 @@
 
                             </TextView>
                             <TextView
+                                android:id="@+id/tv_book_item_lugg_tujuan"
                                 android:layout_weight="1"
                                 android:shadowColor="#F1F5F6"
                                 android:shadowRadius="2"
@@ -140,37 +143,95 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal">
-                            <TextView
-                                android:layout_marginLeft="5dp"
-                                android:layout_weight="1"
-                                android:layout_marginBottom="10dp"
-                                android:textColor="#100F0F"
-                                android:layout_marginTop="5dp"
-                                android:textSize="12dp"
-                                android:textStyle="normal"
-                                android:gravity="left"
-                                android:drawablePadding="5dp"
-                                android:text="Tanggal Berangkat"
+                            <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                >
+                                android:orientation="vertical"
+                                android:layout_weight="1">
+                                <TextView
+                                    android:id="@+id/tv_book_item_lugg_tgal_going"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_weight="1"
+                                    android:layout_marginBottom="0dp"
+                                    android:textColor="#100F0F"
+                                    android:layout_marginTop="5dp"
+                                    android:textSize="12dp"
+                                    android:textStyle="normal"
+                                    android:gravity="left"
+                                    android:drawablePadding="5dp"
+                                    android:text="Tanggal Berangkat"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    >
 
-                            </TextView>
-                            <TextView
-                                android:layout_weight="1"
-                                android:layout_marginBottom="10dp"
-                                android:textColor="#100F0F"
-                                android:layout_marginTop="5dp"
-                                android:textSize="12dp"
-                                android:textStyle="normal"
-                                android:gravity="left"
-                                android:drawablePadding="5dp"
-                                android:text="Tanggal Tiba"
+                                </TextView>
+
+                                <TextView
+                                    android:id="@+id/tv_book_item_lugg_time_going"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_weight="1"
+                                    android:layout_marginBottom="5dp"
+                                    android:textColor="#100F0F"
+                                    android:layout_marginTop="0dp"
+                                    android:textSize="10dp"
+                                    android:textStyle="normal"
+                                    android:gravity="left"
+                                    android:drawablePadding="5dp"
+                                    android:text="Jam Berangkat"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    >
+
+                                </TextView>
+
+
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                >
+                                android:orientation="vertical"
+                                android:layout_weight="1">
+                                <TextView
+                                    android:id="@+id/tv_book_item_lugg_tgal_arr"
+                                    android:layout_weight="1"
+                                    android:layout_marginBottom="0dp"
+                                    android:textColor="#100F0F"
+                                    android:layout_marginTop="5dp"
+                                    android:textSize="12dp"
+                                    android:textStyle="normal"
+                                    android:gravity="left"
+                                    android:drawablePadding="5dp"
+                                    android:text="Tanggal Tiba"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    >
 
-                            </TextView>
+                                </TextView>
+
+                                <TextView
+                                    android:id="@+id/tv_book_item_lugg_time_arr"
+                                    android:layout_weight="1"
+                                    android:layout_marginBottom="5dp"
+                                    android:textColor="#100F0F"
+                                    android:layout_marginTop="0dp"
+                                    android:textSize="10dp"
+                                    android:textStyle="normal"
+                                    android:gravity="left"
+                                    android:drawablePadding="5dp"
+                                    android:text="Jam Tiba"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    >
+
+                                </TextView>
+
+
+
+                            </LinearLayout>
+
 
 
                         </LinearLayout>
@@ -192,57 +253,100 @@
                             android:layout_height="wrap_content"
                             android:orientation="horizontal">
 
-                            <TextView
-                                android:layout_margin="3dp"
-                                android:drawableLeft="@drawable/ic_baseline_perm_identity_24"
+                            <LinearLayout
                                 android:layout_weight="1"
-                                android:layout_marginBottom="10dp"
-                                android:textColor="#100F0F"
-                                android:layout_marginTop="5dp"
-                                android:textSize="12dp"
-                                android:textStyle="normal"
-                                android:gravity="center"
-                                android:drawablePadding="5dp"
-                                android:text="Nama Penjual"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                >
+                                android:orientation="vertical">
 
-                            </TextView>
-                            <TextView
-                                android:layout_margin="3dp"
-                                android:drawableLeft="@drawable/ic_baseline_monetization_on_24"
+                                <TextView
+                                    android:id="@+id/tv_book_item_lugg_nama_seller"
+                                    android:layout_margin="3dp"
+                                    android:drawableLeft="@drawable/ic_baseline_perm_identity_24"
+                                    android:layout_weight="1"
+                                    android:layout_marginBottom="10dp"
+                                    android:textColor="#100F0F"
+                                    android:layout_marginTop="5dp"
+                                    android:textSize="12dp"
+                                    android:textStyle="normal"
+                                    android:gravity="center"
+                                    android:drawablePadding="5dp"
+                                    android:text="Nama Penjual"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    >
+
+                                </TextView>
+                                <TextView
+                                    android:id="@+id/tv_book_item_lugg_price"
+                                    android:layout_margin="3dp"
+                                    android:drawableLeft="@drawable/ic_baseline_monetization_on_24"
+                                    android:layout_weight="1"
+                                    android:layout_marginBottom="10dp"
+                                    android:textColor="#100F0F"
+                                    android:layout_marginTop="5dp"
+                                    android:textSize="12dp"
+                                    android:textStyle="normal"
+                                    android:gravity="center"
+                                    android:drawablePadding="5dp"
+                                    android:text="Harga Bagasi"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    >
+
+                                </TextView>
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
                                 android:layout_weight="1"
-                                android:layout_marginBottom="10dp"
-                                android:textColor="#100F0F"
-                                android:layout_marginTop="5dp"
-                                android:textSize="12dp"
-                                android:textStyle="normal"
-                                android:gravity="center"
-                                android:drawablePadding="5dp"
-                                android:text="Harga Bagasi"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                >
+                                android:orientation="vertical">
+                                <TextView
+                                    android:id="@+id/tv_book_item_lugg_height"
+                                    android:layout_margin="3dp"
+                                    android:drawableLeft="@drawable/ic_baseline_exposure_plus_1_24"
+                                    android:layout_weight="1"
+                                    android:layout_marginBottom="10dp"
+                                    android:textColor="#100F0F"
+                                    android:layout_marginTop="5dp"
+                                    android:textSize="12dp"
+                                    android:textStyle="normal"
+                                    android:gravity="center"
+                                    android:drawablePadding="5dp"
+                                    android:text="Berat Bagasi"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    >
 
-                            </TextView>
-                            <TextView
-                                android:layout_margin="3dp"
-                                android:drawableLeft="@drawable/ic_baseline_approval_24"
-                                android:layout_weight="1"
-                                android:layout_marginBottom="10dp"
-                                android:textColor="#100F0F"
-                                android:layout_marginTop="5dp"
-                                android:textSize="12dp"
-                                android:textStyle="normal"
-                                android:gravity="center"
-                                android:drawablePadding="5dp"
-                                android:text="Berat Bagasi"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                >
+                                </TextView>
 
-                            </TextView>
+                                <TextView
+                                    android:id="@+id/tv_book_item_lugg_type"
+                                    android:layout_margin="3dp"
+                                    android:drawableLeft="@drawable/ic_baseline_home_repair_service_24"
+                                    android:layout_weight="1"
+                                    android:layout_marginBottom="10dp"
+                                    android:textColor="#100F0F"
+                                    android:layout_marginTop="5dp"
+                                    android:textSize="12dp"
+                                    android:textStyle="normal"
+                                    android:gravity="center"
+                                    android:drawablePadding="5dp"
+                                    android:text="Jenis Barang"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    >
+
+                                </TextView>
+
+
+
+                            </LinearLayout>
+
+
 
 
 
@@ -299,6 +403,7 @@
                 </TextView>
 
                 <EditText
+                    android:id="@+id/et_book_by_nama_pengirim"
                     android:padding="3dp"
                     android:layout_marginBottom="10dp"
                     android:layout_marginTop="5dp"
@@ -331,6 +436,7 @@
                 </TextView>
 
                 <EditText
+                    android:id="@+id/et_book_by_nama_penerima"
                     android:padding="3dp"
                     android:layout_marginBottom="10dp"
                     android:layout_marginTop="5dp"
@@ -363,6 +469,7 @@
                 </TextView>
 
                 <EditText
+                    android:id="@+id/et_book_by_alamat_pengirim"
                     android:padding="3dp"
                     android:layout_marginBottom="10dp"
                     android:layout_marginTop="5dp"
@@ -395,6 +502,7 @@
                 </TextView>
 
                 <EditText
+                    android:id="@+id/et_book_by_alamat_penerima"
                     android:padding="3dp"
                     android:layout_marginBottom="10dp"
                     android:layout_marginTop="5dp"
@@ -427,6 +535,7 @@
                 </TextView>
 
                 <EditText
+                    android:id="@+id/et_book_by_berat_kg"
                     android:padding="3dp"
                     android:layout_marginBottom="10dp"
                     android:layout_marginTop="5dp"
@@ -459,6 +568,7 @@
                 </TextView>
 
                 <EditText
+                    android:id="@+id/et_book_by_jenis_barang"
                     android:padding="3dp"
                     android:layout_marginBottom="10dp"
                     android:layout_marginTop="5dp"
@@ -473,6 +583,7 @@
                 </EditText>
 
                 <TextView
+                    android:id="@+id/tv_book_by_btn_order"
                     android:layout_marginBottom="15dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginLeft="10dp"
