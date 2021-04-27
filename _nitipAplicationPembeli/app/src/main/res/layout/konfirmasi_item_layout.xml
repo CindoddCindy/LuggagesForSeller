@@ -52,13 +52,14 @@
 
                 </TextView>
 
+
                 <TextView
                     android:textColor="#151414"
                     android:textSize="10dp"
                     android:textStyle="normal"
                     android:gravity="center"
                     android:drawablePadding="5dp"
-                    android:text="Total Harga"
+                    android:text="Waktu Pembayaran"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     >
@@ -66,17 +67,19 @@
                 </TextView>
 
                 <TextView
+                    android:id="@+id/tv_konf_rv_waktu_bayar"
                     android:textColor="#151414"
                     android:textSize="12dp"
                     android:textStyle="bold"
                     android:gravity="center"
                     android:drawablePadding="5dp"
-                    android:text="Jumlah Uang"
+                    android:text="00:00"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     >
 
                 </TextView>
+
 
 
 
@@ -121,6 +124,7 @@
                 </ImageView>
 
                 <TextView
+                    android:id="@+id/tv_konf_rv_nama_akun_penerima"
                     android:padding="5dp"
                     android:drawableLeft="@drawable/ic_baseline_perm_identity_24"
                     android:layout_marginBottom="10dp"
@@ -136,6 +140,7 @@
 
                 </TextView>
                 <TextView
+                    android:id="@+id/tv_konf_rv_no_rek"
                     android:padding="5dp"
                     android:drawableLeft="@drawable/ic_baseline_chevron_right_24"
                     android:layout_marginBottom="10dp"
@@ -152,6 +157,7 @@
                 </TextView>
 
                 <TextView
+                    android:id="@+id/tv_konf_rv_nama_bank"
                     android:padding="5dp"
                     android:drawableLeft="@drawable/ic_baseline_other_houses_24"
                     android:layout_marginBottom="10dp"
@@ -166,6 +172,24 @@
                     >
 
                 </TextView>
+
+                <TextView
+                    android:id="@+id/tv_konf_rv_jumlah_uang"
+                    android:padding="5dp"
+                    android:drawableLeft="@drawable/ic_baseline_monetization_on_24"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="#151414"
+                    android:textSize="12dp"
+                    android:textStyle="normal"
+                    android:gravity="left"
+                    android:drawablePadding="5dp"
+                    android:text="Nama Bank"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                </TextView>
+
 
 
 
