@@ -5,11 +5,11 @@
         android:title="Search Luggage" />
 
     <item android:id="@+id/booking_lugg"
-        android:icon="@drawable/ic_baseline_arrow_drop_up_24"
+        android:icon="@drawable/ic_baseline_arrow_circle_up_24"
         android:title="Order" />
 
     <item android:id="@+id/conf_lugg"
-        android:icon="@drawable/ic_baseline_arrow_drop_down_24"
+        android:icon="@drawable/ic_baseline_arrow_circle_down_24"
         android:title="Confirmation" />
 
     <item android:id="@+id/payment"
