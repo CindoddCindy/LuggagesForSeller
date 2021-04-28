@@ -2,9 +2,13 @@ package com.cindodcindy.nitippembeli.view.adapter;
 
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.cindodcindy.nitippembeli.R;
 
 public class DoneAdapter extends RecyclerView.Adapter<DoneAdapter.DoneChild> {
 
@@ -25,9 +29,16 @@ public class DoneAdapter extends RecyclerView.Adapter<DoneAdapter.DoneChild> {
     }
 
     public  class DoneChild extends RecyclerView.ViewHolder{
+        private TextView textView_diterima_oleh, textView_tgal_diterima;
+        private CardView cardView_done_btn;
 
         public DoneChild(@NonNull View itemView) {
             super(itemView);
+
+            textView_diterima_oleh=itemView.findViewById(R.id.tv_done_rv_nama_penerima);
+            textView_tgal_diterima=itemView.findViewById(R.id.tv_done_rv_tgal_diterima);
+            cardView_done_btn=itemView.findViewById(R.id.cv_done);
+
         }
     }
 }

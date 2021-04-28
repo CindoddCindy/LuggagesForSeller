@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:elevation="2dp"
         app:cardUseCompatPadding="true"
-        android:id="@+id/cv_done_rv"
+        android:id="@+id/cv_done"
         app:cardMaxElevation="2dp"
         android:layout_margin="2dp"
         >
