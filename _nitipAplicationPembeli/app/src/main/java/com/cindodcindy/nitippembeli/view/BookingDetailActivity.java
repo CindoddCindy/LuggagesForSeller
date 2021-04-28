@@ -54,6 +54,8 @@ public class BookingDetailActivity extends AppCompatActivity {
         textView_by_jenis_barang=findViewById(R.id.tv_book_det_by_jenis_barang);
         textView_by_berat_brg=findViewById(R.id.tv_book_det_by_berat_barang);
 
+        //btn
+
         textView_btn_edit_kirim_booking=findViewById(R.id.tv_book_det_btn_edit_booking);
         textView_btn_hapus_booking=findViewById(R.id.tv_book_det_btn_hapus_booking);
         textView_btn_back_dari_booking=findViewById(R.id.tv_book_det_btn_back);
