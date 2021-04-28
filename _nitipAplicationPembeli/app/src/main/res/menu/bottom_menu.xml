@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/search_lugg_av"
+        android:icon="@drawable/ic_baseline_manage_search_24"
+        android:title="Search Luggage" />
+
+    <item android:id="@+id/booking_lugg"
+        android:icon="@drawable/ic_baseline_arrow_drop_up_24"
+        android:title="Order" />
+
+    <item android:id="@+id/conf_lugg"
+        android:icon="@drawable/ic_baseline_arrow_drop_down_24"
+        android:title="Confirmation" />
+
+    <item android:id="@+id/payment"
+        android:icon="@drawable/ic_baseline_monetization_on_24"
+        android:title="Pembayaran" />
+
+    <item android:id="@+id/done"
+        android:icon="@drawable/ic_baseline_check_circle_outline_24"
+        android:title="Barang Tiba" />
+
+
+
+</menu>
