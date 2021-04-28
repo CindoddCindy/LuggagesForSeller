@@ -76,7 +76,7 @@
                             android:layout_height="wrap_content"
                             android:orientation="horizontal">
                             <TextView
-                                android:id="@+id/id_pay_in_lugg_asal"
+                                android:id="@+id/tv_pay_in_lugg_asal"
                                 android:layout_weight="1"
                                 android:shadowColor="#F1F5F6"
                                 android:shadowRadius="2"
@@ -354,6 +354,242 @@
                 </androidx.cardview.widget.CardView>
 
 
+
+                <TextView
+                    android:shadowColor="#F1F5F6"
+                    android:shadowRadius="2"
+                    android:shadowDx="1"
+                    android:shadowDy="1"
+                    android:padding="3dp"
+                    android:textColor="#040303"
+                    android:layout_marginTop="5dp"
+                    android:textSize="12dp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:drawablePadding="5dp"
+                    android:text="Data Kirim Barang "
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                </TextView>
+
+                <ImageView
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/garis_tebal">
+
+
+                </ImageView>
+
+
+
+                <androidx.cardview.widget.CardView
+                    app:cardMaxElevation="5dp"
+                    android:layout_margin="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardElevation="2dp">
+                    <LinearLayout
+                        android:background="@color/cardview_shadow_end_color"
+                        android:layout_margin="3dp"
+                        android:padding="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:padding="5dp"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:id="@+id/tv_pay_in_by_asal"
+                                android:drawableLeft="@drawable/ic_baseline_person_pin_circle_24"
+                                android:layout_weight="1"
+                                android:shadowColor="#F1F5F6"
+                                android:shadowRadius="2"
+                                android:shadowDx="1"
+                                android:shadowDy="1"
+                                android:textColor="#070707"
+                                android:layout_marginTop="5dp"
+                                android:textSize="12dp"
+                                android:textStyle="bold"
+                                android:gravity="left"
+                                android:drawablePadding="5dp"
+                                android:text="Asal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                >
+
+                            </TextView>
+                            <TextView
+                                android:layout_weight="1"
+                                android:shadowColor="#F1F5F6"
+                                android:shadowRadius="2"
+                                android:shadowDx="1"
+                                android:shadowDy="1"
+                                android:textColor="#070707"
+                                android:layout_marginTop="5dp"
+                                android:textSize="12dp"
+                                android:textStyle="normal"
+                                android:gravity="center"
+                                android:drawablePadding="5dp"
+                                android:text="ke"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                >
+
+                            </TextView>
+                            <TextView
+                                android:id="@+id/tv_pay_in_by_tujuan"
+                                android:drawableLeft="@drawable/ic_baseline_person_pin_circle_24"
+                                android:layout_weight="1"
+                                android:shadowColor="#F1F5F6"
+                                android:shadowRadius="2"
+                                android:shadowDx="1"
+                                android:shadowDy="1"
+                                android:textColor="#070707"
+                                android:layout_marginTop="5dp"
+                                android:textSize="12dp"
+                                android:textStyle="bold"
+                                android:gravity="left"
+                                android:drawablePadding="5dp"
+                                android:text="Tujuan"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                >
+
+                            </TextView>
+
+
+
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:id="@+id/tv_pay_in_by_pengirim"
+                                android:drawableLeft="@drawable/ic_baseline_perm_identity_24"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="1"
+                                android:layout_marginBottom="10dp"
+                                android:textColor="#100F0F"
+                                android:layout_marginTop="5dp"
+                                android:textSize="12dp"
+                                android:textStyle="normal"
+                                android:gravity="left"
+                                android:drawablePadding="5dp"
+                                android:text="Pengirim"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                >
+
+                            </TextView>
+                            <TextView
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="1"
+                                android:layout_marginBottom="10dp"
+                                android:textColor="#100F0F"
+                                android:layout_marginTop="5dp"
+                                android:textSize="12dp"
+                                android:textStyle="normal"
+                                android:gravity="center"
+                                android:drawablePadding="5dp"
+                                android:text="untuk"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                >
+
+                            </TextView>
+
+                            <TextView
+                                android:id="@+id/tv_pay_in_by_penerima"
+                                android:drawableLeft="@drawable/ic_baseline_perm_identity_24"
+                                android:layout_weight="1"
+                                android:layout_marginBottom="10dp"
+                                android:textColor="#100F0F"
+                                android:layout_marginTop="5dp"
+                                android:textSize="12dp"
+                                android:textStyle="normal"
+                                android:gravity="left"
+                                android:drawablePadding="5dp"
+                                android:text="Penerima"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                >
+
+                            </TextView>
+
+
+                        </LinearLayout>
+                        <ImageView
+                            android:layout_marginTop="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/garis_tebal">
+
+
+                        </ImageView>
+
+
+                        <LinearLayout
+                            android:layout_marginTop="5dp"
+                            android:padding="5dp"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_pay_in_by_jenis_barang"
+                                android:layout_margin="3dp"
+                                android:drawableLeft="@drawable/ic_baseline_home_repair_service_24"
+                                android:layout_weight="1"
+                                android:layout_marginBottom="10dp"
+                                android:textColor="#100F0F"
+                                android:layout_marginTop="5dp"
+                                android:textSize="12dp"
+                                android:textStyle="normal"
+                                android:gravity="left"
+                                android:drawablePadding="5dp"
+                                android:text="Jenis Barang"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                >
+
+                            </TextView>
+                            <TextView
+                                android:id="@+id/tv_pay_in_by_berat_barang"
+                                android:layout_margin="3dp"
+                                android:drawableLeft="@drawable/ic_baseline_exposure_plus_1_24"
+                                android:layout_weight="1"
+                                android:layout_marginBottom="10dp"
+                                android:textColor="#100F0F"
+                                android:layout_marginTop="5dp"
+                                android:textSize="12dp"
+                                android:textStyle="normal"
+                                android:gravity="left"
+                                android:drawablePadding="5dp"
+                                android:text="Berat Bagasi"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                >
+
+                            </TextView>
+
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
                 <TextView
 
                     android:shadowColor="#CADAB7"
@@ -443,7 +679,7 @@
                             </TextView>
 
                             <TextView
-                                android:id="@+id/tv_pay_in_waktu_bayar"
+                                android:id="@+id/tv_pay_in_tf_waktu_bayar"
                                 android:textColor="#151414"
                                 android:textSize="12dp"
                                 android:textStyle="bold"
@@ -476,31 +712,9 @@
 
 
 
-                            <TextView
-                                android:padding="3dp"
-                                android:textColor="#151414"
-                                android:textSize="12dp"
-                                android:textStyle="normal"
-                                android:gravity="center"
-                                android:drawablePadding="5dp"
-                                android:text="Harap membayar ke"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                >
-
-                            </TextView>
-
-                            <ImageView
-                                android:layout_marginBottom="5dp"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:src="@drawable/garis_tebal">
-
-
-                            </ImageView>
 
                             <TextView
-                                android:id="@+id/tv_pay_in_nama_akun_penerima"
+                                android:id="@+id/tv_pay_in_tf_nama_akun_penerima"
                                 android:padding="5dp"
                                 android:drawableLeft="@drawable/ic_baseline_perm_identity_24"
                                 android:layout_marginBottom="10dp"
@@ -516,7 +730,7 @@
 
                             </TextView>
                             <TextView
-                                android:id="@+id/tv_pay_in_no_rek"
+                                android:id="@+id/tv_pay_in_tf_in_no_rek"
                                 android:padding="5dp"
                                 android:drawableLeft="@drawable/ic_baseline_chevron_right_24"
                                 android:layout_marginBottom="10dp"
@@ -533,7 +747,7 @@
                             </TextView>
 
                             <TextView
-                                android:id="@+id/tv_pay_in_nama_bank"
+                                android:id="@+id/tv_pay_in_tf_nama_bank"
                                 android:padding="5dp"
                                 android:drawableLeft="@drawable/ic_baseline_other_houses_24"
                                 android:layout_marginBottom="10dp"
@@ -550,7 +764,7 @@
                             </TextView>
 
                             <TextView
-                                android:id="@+id/tv_pay_in_jumlah_uang"
+                                android:id="@+id/tv_pay_in_tf_jumlah_uang"
                                 android:padding="5dp"
                                 android:drawableLeft="@drawable/ic_baseline_monetization_on_24"
                                 android:layout_marginBottom="10dp"
