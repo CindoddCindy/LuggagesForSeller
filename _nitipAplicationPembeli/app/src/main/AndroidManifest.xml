@@ -4,7 +4,6 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
 
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -12,9 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.NitipPembeli"
-        android:usesCleartextTraffic="true"
-        >
-        <activity android:name=".view.InputPaymentActivity"></activity>
+        android:usesCleartextTraffic="true">
+        <activity android:name=".view.PaymentDirectActivity"></activity>
+        <activity android:name=".view.InputPaymentActivity" />
         <activity android:name=".view.InputBookingActivity" />
         <activity android:name=".view.DoneDetailActivity" />
         <activity android:name=".view.PaymentDetailActivity" />

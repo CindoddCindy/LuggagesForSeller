@@ -244,6 +244,26 @@
 
                     </TextView>
 
+                    <TextView
+                        android:id="@+id/tv_item_lugg_order"
+                        android:layout_margin="3dp"
+                        android:layout_weight="1"
+                        android:layout_marginBottom="10dp"
+                        android:textColor="#100F0F"
+                        android:layout_marginTop="5dp"
+                        android:textSize="12dp"
+                        android:textStyle="normal"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:background="#EBEFC8"
+                        android:text="Order"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        >
+
+                    </TextView>
+
+
 
                 </LinearLayout>
 
@@ -289,6 +309,26 @@
                         >
 
                     </TextView>
+
+                    <TextView
+                        android:id="@+id/tv_item_lugg_bayar"
+                        android:layout_margin="3dp"
+                        android:layout_weight="1"
+                        android:layout_marginBottom="10dp"
+                        android:textColor="#100F0F"
+                        android:layout_marginTop="5dp"
+                        android:textSize="12dp"
+                        android:textStyle="normal"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="Bayar"
+                        android:background="#8BC34A"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        >
+
+                    </TextView>
+
 
 
 
