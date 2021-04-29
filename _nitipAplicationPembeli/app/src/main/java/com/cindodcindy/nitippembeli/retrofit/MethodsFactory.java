@@ -1,5 +1,6 @@
 package com.cindodcindy.nitippembeli.retrofit;
 
+import com.cindodcindy.nitippembeli.model.pojo_jasa.pojo_get_jasa.NitipGetAllLuggageAscRespon;
 import com.cindodcindy.nitippembeli.model.pojo_regis_login.pojo_login.NitipLoginRespon;
 import com.cindodcindy.nitippembeli.model.pojo_regis_login.pojo_regis.NitipRegisRespon;
 import com.google.gson.JsonObject;
@@ -24,17 +25,19 @@ public interface MethodsFactory {
     })
     @POST("auth/login")
     Call<NitipLoginRespon> buyerLogin(@Body JsonObject body);
-
+/*
     @Headers({
             "Content-Type:application/json"
     })
     @POST("luggages/users/{userId}/luggages")
     Call<NitipPostLuggageRespon> sellerPostJasa(@Path("userId") Long user_id, @Body JsonObject body);
 
+
+ */
     @Headers({
             "Content-Type:application/json"
     })
-    @GET("luggages/users/{userId}/luggages")
-    Call<NitipGetLuggageRespon> sellerGetOwnLuggage(@Path("userId") Long user_id);
+    @GET("luggages/get/all/luggages")
+    Call<NitipGetAllLuggageAscRespon> buyerGetAscLuggage();
 
 }
