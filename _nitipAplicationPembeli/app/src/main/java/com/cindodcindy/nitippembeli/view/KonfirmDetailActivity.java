@@ -2,7 +2,9 @@ package com.cindodcindy.nitippembeli.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 import com.cindodcindy.nitippembeli.R;
@@ -12,7 +14,7 @@ public class KonfirmDetailActivity extends AppCompatActivity {
     private TextView textView_sl_nama_penerima, textView_sl_no_rek, textView_sl_nama_bank, textView_sl_jumlah_harga,
             textView_sl_waktu_kirim, textView_lokasi_jemput, textView_jam_jemput, textView_estimasi;
     //btn
-    private TextView textView_btn_hapus_konfirm;
+    private TextView textView_btn_hapus_konfirm, textView_bayar_jasa;
 
     //data jasa
     private TextView textView_asal, textView_tujuan, textView_date_going, textView_date_arive,
@@ -64,7 +66,16 @@ public class KonfirmDetailActivity extends AppCompatActivity {
         textView_by_jenis_barang=findViewById(R.id.tv_konf_det_by_jenis_barang);
         textView_by_berat_brg=findViewById(R.id.tv_konf_det_by_height);
 
+
         textView_btn_hapus_konfirm=findViewById(R.id.tv_konf_det_btn_delete);
+        textView_bayar_jasa=findViewById(R.id.tv_konf_det_btn_bayar_jasa);
+
+        textView_bayar_jasa.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
 
 
 
@@ -114,5 +125,41 @@ public class KonfirmDetailActivity extends AppCompatActivity {
 
 
 
+    }
+
+    public void konfirmPayLuggage(){
+        Bundle bundle = new Bundle();
+        //bundle.putLong("id_seller", content.getIdSeller());
+        bundle.putString("asal",textView_asal.getText().toString());
+        bundle.putString("tujuan",textView_tujuan.getText().toString());
+        bundle.putString("tglgo",textView_date_going.getText().toString());
+        bundle.putString("tglarr",textView_date_arive.getText().toString());
+        bundle.putString("jamgo", textView_time_going.getText().toString());
+        bundle.putString("jamarr",textView_time_arrive.getText().toString());
+        bundle.putString("namapenjual",textView_nama_penjual.getText().toString());
+        bundle.putString("kapasitas",textView_kapasitas.getText().toString());
+        bundle.putString("jenisbarang",textView_jenis_barang.getText().toString());
+        bundle.putString("harga", textView_harga.getText().toString());
+
+        bundle.putString("asalBr",textView_by_asal.getText().toString());
+        bundle.putString("tujuanBr",textView_by_tujuan.getText().toString());
+        bundle.putString("pengirim",textView_by_pengirim.getText().toString());
+        bundle.putString("penerima",textView_by_penerima.getText().toString());
+        bundle.putString("jenisBr", textView_by_jenis_barang.getText().toString());
+        bundle.putString("beratBr",textView_by_berat_brg.getText().toString());
+
+        bundle.putString("namaAkun",textView_sl_nama_penerima.getText().toString());
+        bundle.putString("noRek",textView_sl_no_rek.getText().toString());
+        bundle.putString("jenisBank",textView_sl_nama_bank.getText().toString());
+        bundle.putString("jumlahBayar",textView_sl_jumlah_harga.getText().toString());
+        bundle.putString("waktubayar", textView_sl_waktu_kirim.getText().toString());
+
+        bundle.putString("lokasiBertemu", textView_lokasi_jemput.getText().toString());
+        bundle.putString("jamAmbilBrg",textView_jam_jemput.getText().toString());
+        bundle.putString("estimasisampai", textView_estimasi.getText().toString());
+
+        Intent intent = new Intent(KonfirmDetailActivity.this, InputPaymentActivity.class);
+        intent.putExtras(bundle);
+        startActivity(intent);
     }
 }

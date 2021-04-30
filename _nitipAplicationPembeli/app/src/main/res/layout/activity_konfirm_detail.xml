@@ -877,6 +877,22 @@
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
 
+                    <TextView
+                        android:id="@+id/tv_konf_det_btn_bayar_jasa"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:textSize="15dp"
+                        android:text="Bayar Jasa"
+                        android:gravity="center"
+                        android:textColor="#0C0C0C"
+                        android:padding="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#8BC34A">
+
+                    </TextView>
 
                     <TextView
                         android:id="@+id/tv_konf_det_btn_delete"
