@@ -1,5 +1,6 @@
 package com.cindodcindy.nitippembeli.retrofit;
 
+import com.cindodcindy.nitippembeli.model.pojo_booking.pojo_post_booking.NitipPostBooking;
 import com.cindodcindy.nitippembeli.model.pojo_jasa.pojo_get_jasa.NitipGetAllLuggageAscRespon;
 import com.cindodcindy.nitippembeli.model.pojo_regis_login.pojo_login.NitipLoginRespon;
 import com.cindodcindy.nitippembeli.model.pojo_regis_login.pojo_regis.NitipRegisRespon;
@@ -25,15 +26,24 @@ public interface MethodsFactory {
     })
     @POST("auth/login")
     Call<NitipLoginRespon> buyerLogin(@Body JsonObject body);
-/*
+
     @Headers({
             "Content-Type:application/json"
     })
-    @POST("luggages/users/{userId}/luggages")
-    Call<NitipPostLuggageRespon> sellerPostJasa(@Path("userId") Long user_id, @Body JsonObject body);
+    @POST("/booking/users/{userId}/bookings")
+    Call<NitipPostBooking> sendBookingToMe(@Path("userId") Long user_id, @Body JsonObject body);
 
 
- */
+    @Headers({
+            "Content-Type:application/json"
+    })
+    @POST("/booking/users/{userId}/bookings")
+    Call<NitipPostBooking> sendBookingToSeller(@Path("userId") Long user_id, @Body JsonObject body);
+
+
+
+
+
     @Headers({
             "Content-Type:application/json"
     })
