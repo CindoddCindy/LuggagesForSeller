@@ -301,6 +301,24 @@
 
                                 </TextView>
 
+                                <TextView
+                                    android:id="@+id/tv_konf_det_estimasi_brg_tiba"
+                                    android:padding="5dp"
+                                    android:drawableLeft="@drawable/ic_baseline_hourglass_full_24"
+                                    android:layout_marginBottom="10dp"
+                                    android:textColor="#151414"
+                                    android:textSize="12dp"
+                                    android:textStyle="normal"
+                                    android:gravity="left"
+                                    android:drawablePadding="5dp"
+                                    android:text="Di antar pukul"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    >
+
+                                </TextView>
+
+
 
 
 

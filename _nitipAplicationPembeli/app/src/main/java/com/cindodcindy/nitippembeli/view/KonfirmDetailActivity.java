@@ -10,7 +10,7 @@ import com.cindodcindy.nitippembeli.R;
 public class KonfirmDetailActivity extends AppCompatActivity {
     //data payment
     private TextView textView_sl_nama_penerima, textView_sl_no_rek, textView_sl_nama_bank, textView_sl_jumlah_harga,
-            textView_sl_waktu_kirim, textView_lokasi_jemput, textView_jam_jemput;
+            textView_sl_waktu_kirim, textView_lokasi_jemput, textView_jam_jemput, textView_estimasi;
     //btn
     private TextView textView_btn_hapus_konfirm;
 
@@ -39,6 +39,7 @@ public class KonfirmDetailActivity extends AppCompatActivity {
         textView_sl_waktu_kirim=findViewById(R.id.tv_konf_det_waktu_bayar);
         textView_lokasi_jemput=findViewById(R.id.tv_konf_det_lok_antar);
         textView_jam_jemput=findViewById(R.id.tv_konf_det_wktu_antar);
+        textView_estimasi=findViewById(R.id.tv_konf_det_estimasi_brg_tiba);
 
 
         //data jasa
@@ -66,6 +67,10 @@ public class KonfirmDetailActivity extends AppCompatActivity {
         textView_btn_hapus_konfirm=findViewById(R.id.tv_konf_det_btn_delete);
 
 
+
+    }
+
+    public  void getConfirmDetail(){
 
     }
 }
