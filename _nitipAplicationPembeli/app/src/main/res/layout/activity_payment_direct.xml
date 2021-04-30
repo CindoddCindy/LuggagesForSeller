@@ -18,7 +18,7 @@
                 android:background="@drawable/payment_direct_dua"
                 android:layout_weight="1"
                 android:layout_width="match_parent"
-                android:layout_height="260dp"
+                android:layout_height="350dp"
                 android:orientation="vertical">
 
             </LinearLayout>
@@ -76,7 +76,7 @@
                             android:layout_height="wrap_content"
                             android:orientation="horizontal">
                             <TextView
-                                android:id="@+id/tv_pay_in_lugg_asal"
+                                android:id="@+id/tv_dir_pay_in_lugg_asal"
                                 android:layout_weight="1"
                                 android:shadowColor="#F1F5F6"
                                 android:shadowRadius="2"
@@ -113,7 +113,7 @@
 
                             </TextView>
                             <TextView
-                                android:id="@+id/tv_pay_in_lugg_tujuan"
+                                android:id="@+id/tv_dir_pay_in_lugg_tujuan"
                                 android:layout_weight="1"
                                 android:shadowColor="#F1F5F6"
                                 android:shadowRadius="2"
@@ -147,7 +147,7 @@
                                 android:orientation="vertical"
                                 android:layout_weight="1">
                                 <TextView
-                                    android:id="@+id/tv_pay_in_lugg_tgal_going"
+                                    android:id="@+id/tv_dir_pay_in_lugg_tgal_going"
                                     android:layout_marginLeft="5dp"
                                     android:layout_weight="1"
                                     android:layout_marginBottom="0dp"
@@ -165,7 +165,7 @@
                                 </TextView>
 
                                 <TextView
-                                    android:id="@+id/tv_pay_in_lugg_time_going"
+                                    android:id="@+id/tv_dir_pay_in_lugg_time_going"
                                     android:layout_marginLeft="5dp"
                                     android:layout_weight="1"
                                     android:layout_marginBottom="5dp"
@@ -193,7 +193,7 @@
                                 android:orientation="vertical"
                                 android:layout_weight="1">
                                 <TextView
-                                    android:id="@+id/tv_pay_in_lugg_tgal_arr"
+                                    android:id="@+id/tv_dir_pay_in_lugg_tgal_arr"
                                     android:layout_weight="1"
                                     android:layout_marginBottom="0dp"
                                     android:textColor="#100F0F"
@@ -210,7 +210,7 @@
                                 </TextView>
 
                                 <TextView
-                                    android:id="@+id/tv_pay_in_lugg_time_arr"
+                                    android:id="@+id/tv_dir_pay_in_lugg_time_arr"
                                     android:layout_weight="1"
                                     android:layout_marginBottom="5dp"
                                     android:textColor="#100F0F"
@@ -258,7 +258,7 @@
                                 android:orientation="vertical">
 
                                 <TextView
-                                    android:id="@+id/tv_pay_in_lugg_nama_seller"
+                                    android:id="@+id/tv_dir_pay_in_lugg_nama_seller"
                                     android:layout_margin="3dp"
                                     android:drawableLeft="@drawable/ic_baseline_perm_identity_24"
                                     android:layout_weight="1"
@@ -276,7 +276,7 @@
 
                                 </TextView>
                                 <TextView
-                                    android:id="@+id/tv_pay_in_lugg_price"
+                                    android:id="@+id/tv_dir_pay_in_lugg_price"
                                     android:layout_margin="3dp"
                                     android:drawableLeft="@drawable/ic_baseline_monetization_on_24"
                                     android:layout_weight="1"
@@ -303,7 +303,7 @@
                                 android:layout_height="wrap_content"
                                 android:orientation="vertical">
                                 <TextView
-                                    android:id="@+id/tv_pay_in_lugg_height"
+                                    android:id="@+id/tv_dir_pay_in_lugg_height"
                                     android:layout_margin="3dp"
                                     android:drawableLeft="@drawable/ic_baseline_exposure_plus_1_24"
                                     android:layout_weight="1"
@@ -322,7 +322,7 @@
                                 </TextView>
 
                                 <TextView
-                                    android:id="@+id/tv_pay_in_lugg_type"
+                                    android:id="@+id/tv_dir_pay_in_lugg_type"
                                     android:layout_margin="3dp"
                                     android:drawableLeft="@drawable/ic_baseline_home_repair_service_24"
                                     android:layout_weight="1"
@@ -352,7 +352,7 @@
 
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
-<TextView
+                <TextView
                     android:shadowColor="#CADAB7"
                     android:shadowRadius="2"
                     android:shadowDx="1"
@@ -399,7 +399,7 @@
                 </TextView>
 
                 <EditText
-                    android:id="@+id/et_book_in_by_nama_pengirim"
+                    android:id="@+id/et_dir_pay_in_by_nama_pengirim"
                     android:padding="3dp"
                     android:layout_marginBottom="10dp"
                     android:layout_marginTop="5dp"
@@ -432,7 +432,7 @@
                 </TextView>
 
                 <EditText
-                    android:id="@+id/et_book_in_by_nama_penerima"
+                    android:id="@+id/et_dir_pay_book_in_by_nama_penerima"
                     android:padding="3dp"
                     android:layout_marginBottom="10dp"
                     android:layout_marginTop="5dp"
@@ -465,7 +465,7 @@
                 </TextView>
 
                 <EditText
-                    android:id="@+id/et_book_in_by_alamat_pengirim"
+                    android:id="@+id/et_dir_pay_book_in_by_alamat_pengirim"
                     android:padding="3dp"
                     android:layout_marginBottom="10dp"
                     android:layout_marginTop="5dp"
@@ -498,7 +498,7 @@
                 </TextView>
 
                 <EditText
-                    android:id="@+id/et_book_in_by_alamat_penerima"
+                    android:id="@+id/et_dir_pay_book_in_by_alamat_penerima"
                     android:padding="3dp"
                     android:layout_marginBottom="10dp"
                     android:layout_marginTop="5dp"
@@ -531,7 +531,7 @@
                 </TextView>
 
                 <EditText
-                    android:id="@+id/et_book_in_by_berat_kg"
+                    android:id="@+id/et_dir_pay_book_in_by_berat_kg"
                     android:padding="3dp"
                     android:layout_marginBottom="10dp"
                     android:layout_marginTop="5dp"
@@ -564,7 +564,7 @@
                 </TextView>
 
                 <EditText
-                    android:id="@+id/et_book_in_by_jenis_barang"
+                    android:id="@+id/et_dir_pay_book_in_by_jenis_barang"
                     android:padding="3dp"
                     android:layout_marginBottom="10dp"
                     android:layout_marginTop="5dp"
@@ -636,7 +636,7 @@
 
 
                             <TextView
-                                android:id="@+id/tv_pay_in_tf_nama_akun_penerima"
+                                android:id="@+id/tv_dir_pay_in_tf_nama_akun_penerima"
                                 android:padding="5dp"
                                 android:drawableLeft="@drawable/ic_baseline_perm_identity_24"
                                 android:layout_marginBottom="10dp"
@@ -652,7 +652,7 @@
 
                             </TextView>
                             <TextView
-                                android:id="@+id/tv_pay_in_tf_in_no_rek"
+                                android:id="@+id/tv_dir_pay_in_tf_in_no_rek"
                                 android:padding="5dp"
                                 android:drawableLeft="@drawable/ic_baseline_chevron_right_24"
                                 android:layout_marginBottom="10dp"
@@ -669,7 +669,7 @@
                             </TextView>
 
                             <TextView
-                                android:id="@+id/tv_pay_in_tf_nama_bank"
+                                android:id="@+id/tv_dir_pay_in_tf_nama_bank"
                                 android:padding="5dp"
                                 android:drawableLeft="@drawable/ic_baseline_other_houses_24"
                                 android:layout_marginBottom="10dp"
@@ -686,7 +686,7 @@
                             </TextView>
 
                             <TextView
-                                android:id="@+id/tv_pay_in_tf_jumlah_uang"
+                                android:id="@+id/tv_dir_pay_in_tf_jumlah_uang"
                                 android:padding="5dp"
                                 android:drawableLeft="@drawable/ic_baseline_monetization_on_24"
                                 android:layout_marginBottom="10dp"
@@ -771,7 +771,7 @@
                 </TextView>
 
                 <EditText
-                    android:id="@+id/et_pay_in_by_tf_nama_pengirim"
+                    android:id="@+id/et_dir_pay_in_by_tf_nama_pengirim"
                     android:padding="3dp"
                     android:layout_marginBottom="10dp"
                     android:layout_marginTop="5dp"
@@ -805,7 +805,7 @@
                 </TextView>
 
                 <EditText
-                    android:id="@+id/et_pay_in_by_tf_bank_asal"
+                    android:id="@+id/et_dir_pay_in_by_tf_bank_asal"
                     android:padding="3dp"
                     android:layout_marginBottom="10dp"
                     android:layout_marginTop="5dp"
@@ -839,7 +839,7 @@
                 </TextView>
 
                 <EditText
-                    android:id="@+id/et_pay_in_by_tf_tgal_tf"
+                    android:id="@+id/et_dir_pay_in_by_tf_tgal_tf"
                     android:padding="3dp"
                     android:layout_marginBottom="10dp"
                     android:layout_marginTop="5dp"
@@ -873,7 +873,7 @@
                 </TextView>
 
                 <EditText
-                    android:id="@+id/et_pay_in_by_tf_jumlah_uang"
+                    android:id="@+id/et_dir_pay_in_by_tf_jumlah_uang"
                     android:padding="3dp"
                     android:layout_marginBottom="10dp"
                     android:layout_marginTop="5dp"
@@ -889,7 +889,7 @@
 
 
                 <TextView
-                    android:id="@+id/tv_pay_in_btn_bayar"
+                    android:id="@+id/tv_dir_pay_in_btn_bayar"
                     android:layout_marginBottom="15dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginLeft="10dp"
