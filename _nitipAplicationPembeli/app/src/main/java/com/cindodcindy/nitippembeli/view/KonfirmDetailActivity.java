@@ -72,5 +72,47 @@ public class KonfirmDetailActivity extends AppCompatActivity {
 
     public  void getConfirmDetail(){
 
+        if(getIntent().getExtras()!=null) {
+            /**
+             * Jika Bundle ada, ambil data dari Bundle
+             */
+            Bundle bundle = getIntent().getExtras();
+
+            // spHandle.setSpIdConfirmOrderEdit(SpHandle.SP_ID_CONFIRM_ORDER_EDIT, bundle.getLong("id_customer"));
+            //spHandle.setSpIdConfirmOrder(SpHandle.SP_ID_CONFIRM_ORDER,bundle.getLong("id_confirm"));
+            textView_asal.setText(bundle.getString("asal"));
+            textView_tujuan.setText(bundle.getString("tujuan"));
+            textView_date_going.setText(bundle.getString("tglgo"));
+            textView_date_arive.setText(bundle.getString("tglarr"));
+            textView_time_going.setText(bundle.getString("jamgo"));
+            textView_time_arrive.setText(bundle.getString("jamarr"));
+            textView_nama_penjual.setText(bundle.getString("namapenjual"));
+            textView_harga.setText(bundle.getString("harga"));
+            textView_kapasitas.setText(bundle.getString("kapasitas"));
+            textView_jenis_barang.setText(bundle.getString("jenisbarang"));
+
+            textView_by_asal.setText(bundle.getString("asalBr"));
+            textView_by_tujuan.setText(bundle.getString("tujuanBr"));
+            textView_by_pengirim.setText(bundle.getString("pengirim"));
+            textView_by_penerima.setText(bundle.getString("penerima"));
+            textView_by_jenis_barang.setText(bundle.getString("jenisBr"));
+            textView_by_berat_brg.setText(bundle.getString("beratBr"));
+
+            textView_sl_nama_penerima.setText(bundle.getString("namaAkun"));
+            textView_sl_no_rek.setText(bundle.getString("noRek"));
+            textView_sl_nama_bank.setText(bundle.getString("jenisBank"));
+            textView_sl_jumlah_harga.setText(bundle.getString("jumlahBayar"));
+            textView_sl_waktu_kirim.setText(bundle.getString("waktubayar"));
+            textView_lokasi_jemput.setText(bundle.getString("lokasiBertemu"));
+            textView_jam_jemput.setText(bundle.getString("jamAmbilBrg"));
+            textView_estimasi.setText(bundle.getString("estimasisampai"));
+
+
+
+
+        }
+
+
+
     }
 }
