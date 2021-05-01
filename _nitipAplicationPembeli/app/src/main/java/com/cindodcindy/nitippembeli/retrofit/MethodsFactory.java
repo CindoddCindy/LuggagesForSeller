@@ -1,5 +1,6 @@
 package com.cindodcindy.nitippembeli.retrofit;
 
+import com.cindodcindy.nitippembeli.model.pojo_booking.pojo_get_booking.NitipGetBookingRespon;
 import com.cindodcindy.nitippembeli.model.pojo_booking.pojo_post_booking.NitipPostBooking;
 import com.cindodcindy.nitippembeli.model.pojo_jasa.pojo_get_jasa.NitipGetAllLuggageAscRespon;
 import com.cindodcindy.nitippembeli.model.pojo_regis_login.pojo_login.NitipLoginRespon;
@@ -49,5 +50,11 @@ public interface MethodsFactory {
     })
     @GET("luggages/get/all/luggages")
     Call<NitipGetAllLuggageAscRespon> buyerGetAscLuggage();
+
+    @Headers({
+            "Content-Type:application/json"
+    })
+    @GET("booking/users/{userId}/bookings")
+    Call<NitipGetBookingRespon> buyerGetOwnBookingList(@Path("userId") Long user_id);
 
 }

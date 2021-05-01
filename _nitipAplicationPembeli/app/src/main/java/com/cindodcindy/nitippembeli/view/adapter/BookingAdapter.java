@@ -89,7 +89,7 @@ public class BookingAdapter  extends RecyclerView.Adapter<BookingAdapter.Booking
 
     @Override
     public int getItemCount() {
-        return contentList.size();
+        return 0;
     }
 
     public class BookingChild  extends RecyclerView.ViewHolder{

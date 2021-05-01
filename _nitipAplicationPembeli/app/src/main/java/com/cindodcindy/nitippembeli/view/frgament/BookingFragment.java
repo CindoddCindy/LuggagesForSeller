@@ -3,12 +3,30 @@ package com.cindodcindy.nitippembeli.view.frgament;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.cindodcindy.nitippembeli.R;
+import com.cindodcindy.nitippembeli.model.pojo_booking.pojo_get_booking.Content;
+import com.cindodcindy.nitippembeli.model.pojo_booking.pojo_get_booking.NitipGetBookingRespon;
+import com.cindodcindy.nitippembeli.model.pojo_jasa.pojo_get_jasa.NitipGetAllLuggageAscRespon;
+import com.cindodcindy.nitippembeli.retrofit.MethodsFactory;
+import com.cindodcindy.nitippembeli.retrofit.RetrofitHandle;
+import com.cindodcindy.nitippembeli.shared_pref.SpHandle;
+import com.cindodcindy.nitippembeli.view.adapter.BookingAdapter;
+import com.cindodcindy.nitippembeli.view.adapter.LuggAvAdapter;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -21,6 +39,14 @@ public class BookingFragment extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
+
+    private RecyclerView recyclerView;
+    private BookingAdapter bookingAdapter;
+    private List<com.cindodcindy.nitippembeli.model.pojo_booking.pojo_get_booking.Content> contentList = new ArrayList<>();
+    private MethodsFactory methodsFactory;
+    private SpHandle spHandle;
+
+
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -61,6 +87,66 @@ public class BookingFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_booking, container, false);
+        View view = inflater.inflate(R.layout.fragment_booking, container, false);
+
+        spHandle = new SpHandle(getContext());
+
+        recyclerView = view.findViewById(R.id.rv_booking);
+        bookingAdapter = new BookingAdapter( contentList, getContext());
+        recyclerView.setAdapter(bookingAdapter);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
+        recyclerView.setLayoutManager(linearLayoutManager);
+
+        buyerBookingList();
+
+        return view;
+
+    }
+
+    public void buyerBookingList(){
+
+        Long id = spHandle.getIdBuyer();
+
+
+
+        methodsFactory = RetrofitHandle.getRetrofitLink().create(MethodsFactory.class);
+        Call<NitipGetBookingRespon> bookingResponCall= methodsFactory.buyerGetOwnBookingList(id);
+        bookingResponCall.enqueue(new Callback<NitipGetBookingRespon>() {
+            @Override
+            public void onResponse(Call<NitipGetBookingRespon> call, Response<NitipGetBookingRespon> response) {
+
+                if (response.isSuccessful()) {
+                    List<Content> content = response.body().getContent();
+                    bookingAdapter = new BookingAdapter(content, getContext());
+                    recyclerView.setAdapter(bookingAdapter);
+                    bookingAdapter.notifyDataSetChanged();
+                }
+                else {
+                    // error case
+                    switch (response.code()) {
+                        case 404:
+                            Toast.makeText(getContext(), "404 not found", Toast.LENGTH_SHORT).show();
+                            break;
+                        case 500:
+                            Toast.makeText(getContext(), "500 internal server error", Toast.LENGTH_SHORT).show();
+                            break;
+                        case 401:
+                            Toast.makeText(getContext(), "401 unauthorized", Toast.LENGTH_SHORT).show();
+                            break;
+
+                        default:
+                            Toast.makeText(getContext(), "unknown error", Toast.LENGTH_SHORT).show();
+                            break;
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(Call<NitipGetBookingRespon> call, Throwable t) {
+                Toast.makeText(getContext(), "network failure :( inform the user and possibly retry ", Toast.LENGTH_SHORT).show();
+
+            }
+        });
+
     }
 }
