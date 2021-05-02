@@ -10,6 +10,7 @@ import android.widget.Toast;
 
 import com.cindodcindy.nitippembeli.R;
 import com.cindodcindy.nitippembeli.model.pojo_booking.pojo_post_booking.NitipPostBooking;
+import com.cindodcindy.nitippembeli.model.pojo_payments.pojo_post_payments.NitipPostPaymentRespon;
 import com.cindodcindy.nitippembeli.retrofit.MethodsFactory;
 import com.cindodcindy.nitippembeli.retrofit.RetrofitHandle;
 import com.cindodcindy.nitippembeli.shared_pref.SpHandle;
@@ -162,6 +163,14 @@ public class InputPaymentActivity extends AppCompatActivity {
         String jenisBarangby = textView_by_jenis_barang.getText().toString();
         String beratbarangby = textView_by_berat_brg.getText().toString();
 
+        String tfNamaPengirim=editText_nama_tf.getText().toString();
+        String tfBankPengirim=editText_bank_asal.getText().toString();
+        String tfTanggalUangKirim=editText_tgal_tf.getText().toString();
+        String tfJumlhaUangKirim=editText_jumlah_uang_bayar_bagasi.getText().toString();
+
+        String tfPhonePhonePenerima=editText_phone_penerima.getText().toString();
+        String tfPhonePengirim=editText_phone_pengirim.getText().toString();
+
         Long idSeller=spHandle.getIdSeller();
         Long idBuyer=spHandle.getIdBuyer();
 
@@ -182,6 +191,17 @@ public class InputPaymentActivity extends AppCompatActivity {
 
         JsonObject jsonObject = new JsonObject();
 
+        jsonObject.addProperty("namaPengirimUang", tfNamaPengirim);
+        jsonObject.addProperty("bankPengirimUang",tfBankPengirim);
+        jsonObject.addProperty("tanggalTransfer", tfTanggalUangKirim);
+        jsonObject.addProperty("uangSejumlah", tfJumlhaUangKirim);
+        jsonObject.addProperty("phonePenerimaBarang", tfPhonePhonePenerima);
+        jsonObject.addProperty("phonePengirimBarang", tfPhonePengirim);
+
+        jsonObject.addProperty("idBuyer", idBuyer);
+        jsonObject.addProperty("idSeller",idSeller);
+
+
         jsonObject.addProperty("namaPembeli",pengirimBy );
         jsonObject.addProperty("alamatPembeli",asalBy);
         jsonObject.addProperty("alamatPenerima",tujuanBy );
@@ -199,18 +219,16 @@ public class InputPaymentActivity extends AppCompatActivity {
         jsonObject.addProperty("kapasitas",kapasitasSl);
         jsonObject.addProperty("jenisBarang", jenisBarangsl);
         jsonObject.addProperty("hargaBagasi", hargaSl);
-        jsonObject.addProperty("id_buyer", idBuyer);
-        jsonObject.addProperty("id_seller",idSeller);
 
 
 
 
 
         MethodsFactory methodsFactory =  RetrofitHandle.getRetrofitLink().create(MethodsFactory.class);
-        Call<NitipPostBooking> postBookingCall= methodsFactory.sendBookingToMe(idBuyer,jsonObject);
-        postBookingCall.enqueue(new Callback<NitipPostBooking>() {
+        Call<NitipPostPaymentRespon> postPaymentResponCall= methodsFactory.sendPaymentToMe(idBuyer,jsonObject);
+        postPaymentResponCall.enqueue(new Callback<NitipPostPaymentRespon>() {
             @Override
-            public void onResponse(Call<NitipPostBooking> call, Response<NitipPostBooking> response) {
+            public void onResponse(Call<NitipPostPaymentRespon> call, Response<NitipPostPaymentRespon> response) {
                 if(response.isSuccessful()){
 
 
@@ -239,7 +257,7 @@ public class InputPaymentActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onFailure(Call<NitipPostBooking> call, Throwable t) {
+            public void onFailure(Call<NitipPostPaymentRespon> call, Throwable t) {
                 Toast.makeText(InputPaymentActivity.this, "network failure :( inform the user and possibly retry ", Toast.LENGTH_SHORT).show();
 
             }
@@ -251,6 +269,116 @@ public class InputPaymentActivity extends AppCompatActivity {
     }
 
     public void sendPayemntToAdmin(){
+
+        String asalBy = textView_by_asal.getText().toString();
+        String tujuanBy = textView_by_tujuan.getText().toString();
+        String pengirimBy = textView_by_pengirim.getText().toString();
+        String penerimaBy = textView_by_penerima.getText().toString();
+        String jenisBarangby = textView_by_jenis_barang.getText().toString();
+        String beratbarangby = textView_by_berat_brg.getText().toString();
+
+        String tfNamaPengirim=editText_nama_tf.getText().toString();
+        String tfBankPengirim=editText_bank_asal.getText().toString();
+        String tfTanggalUangKirim=editText_tgal_tf.getText().toString();
+        String tfJumlhaUangKirim=editText_jumlah_uang_bayar_bagasi.getText().toString();
+
+        String tfPhonePhonePenerima=editText_phone_penerima.getText().toString();
+        String tfPhonePengirim=editText_phone_pengirim.getText().toString();
+
+        Long idSeller=spHandle.getIdSeller();
+        Long idBuyer=spHandle.getIdBuyer();
+
+        //data jasa
+        String asalSl = textView_asal.getText().toString();
+        String tujuanSl  = textView_tujuan.getText().toString();
+        String tgalGoSl =  textView_date_going.getText().toString();
+        String tgalArrSl =  textView_date_arive.getText().toString();
+        String timeGoSl =  textView_time_going.getText().toString();
+        String timeArrSl = textView_time_arrive.getText().toString();
+        String namaPenjualSl  =  textView_nama_penjual.getText().toString();
+        String hargaSl  =  textView_harga.getText().toString();
+        String jenisBarangsl  = textView_jenis_barang.getText().toString();
+        String kapasitasSl =  textView_kapasitas.getText().toString();
+
+
+
+
+        JsonObject jsonObject = new JsonObject();
+
+        jsonObject.addProperty("namaPengirimUang", tfNamaPengirim);
+        jsonObject.addProperty("bankPengirimUang",tfBankPengirim);
+        jsonObject.addProperty("tanggalTransfer", tfTanggalUangKirim);
+        jsonObject.addProperty("uangSejumlah", tfJumlhaUangKirim);
+        jsonObject.addProperty("phonePenerimaBarang", tfPhonePhonePenerima);
+        jsonObject.addProperty("phonePengirimBarang", tfPhonePengirim);
+
+        jsonObject.addProperty("idBuyer", idBuyer);
+        jsonObject.addProperty("idSeller",idSeller);
+
+
+        jsonObject.addProperty("namaPembeli",pengirimBy );
+        jsonObject.addProperty("alamatPembeli",asalBy);
+        jsonObject.addProperty("alamatPenerima",tujuanBy );
+        jsonObject.addProperty("namaPenerima",penerimaBy );
+        jsonObject.addProperty("jenisBarangKirim",jenisBarangby );
+        jsonObject.addProperty("kapasitasBarang",beratbarangby );
+
+        jsonObject.addProperty("namaPenjual",namaPenjualSl );
+        jsonObject.addProperty("asal",asalSl );
+        jsonObject.addProperty("tujuan",tujuanSl );
+        jsonObject.addProperty("tanggalBerangkat",tgalGoSl );
+        jsonObject.addProperty("jamBerangkat",timeGoSl );
+        jsonObject.addProperty("tanggalTiba",tgalArrSl);
+        jsonObject.addProperty("jamTiba", timeArrSl);
+        jsonObject.addProperty("kapasitas",kapasitasSl);
+        jsonObject.addProperty("jenisBarang", jenisBarangsl);
+        jsonObject.addProperty("hargaBagasi", hargaSl);
+
+
+
+
+
+        MethodsFactory methodsFactory =  RetrofitHandle.getRetrofitLink().create(MethodsFactory.class);
+        Call<NitipPostPaymentRespon> postPaymentResponCall= methodsFactory.sendPaymentToMe(idBuyer,jsonObject);
+        postPaymentResponCall.enqueue(new Callback<NitipPostPaymentRespon>() {
+            @Override
+            public void onResponse(Call<NitipPostPaymentRespon> call, Response<NitipPostPaymentRespon> response) {
+                if(response.isSuccessful()){
+
+
+
+                }
+
+                else {
+                    // error case
+                    switch (response.code()) {
+                        case 404:
+                            Toast.makeText(InputPaymentActivity.this, " not found", Toast.LENGTH_SHORT).show();
+                            break;
+                        case 500:
+                            Toast.makeText(InputPaymentActivity.this, "server error", Toast.LENGTH_SHORT).show();
+                            break;
+                        case 401:
+                            Toast.makeText(InputPaymentActivity.this, " sorry can't authenticated, try again", Toast.LENGTH_SHORT).show();
+                            break;
+
+                        default:
+                            Toast.makeText(InputPaymentActivity.this, "unknown error ", Toast.LENGTH_SHORT).show();
+                            break;
+                    }
+                }
+
+            }
+
+            @Override
+            public void onFailure(Call<NitipPostPaymentRespon> call, Throwable t) {
+                Toast.makeText(InputPaymentActivity.this, "network failure :( inform the user and possibly retry ", Toast.LENGTH_SHORT).show();
+
+            }
+        });
+
+
+
 
     }
 
