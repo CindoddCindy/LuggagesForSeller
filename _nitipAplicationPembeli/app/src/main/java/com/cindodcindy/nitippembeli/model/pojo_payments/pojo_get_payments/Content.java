@@ -41,6 +41,21 @@ public class Content {
     @SerializedName("idSeller")
     @Expose
     private long idSeller;
+    @SerializedName("namaPenerimUang")
+    @Expose
+    private String namaPenerimUang;
+    @SerializedName("noRekPenerimaUang")
+    @Expose
+    private String noRekPenerimaUang;
+    @SerializedName("bankPenerimaUang")
+    @Expose
+    private String bankPenerimaUang;
+    @SerializedName("jumlahTfPenerimaUang")
+    @Expose
+    private String jumlahTfPenerimaUang;
+    @SerializedName("waktuPenerimaUang")
+    @Expose
+    private String waktuPenerimaUang;
     @SerializedName("namaPembeli")
     @Expose
     private String namaPembeli;
@@ -102,12 +117,15 @@ public class Content {
      * @param namaPenerima
      * @param jenisBarang
      * @param uangSejumlah
+     * @param waktuPenerimaUang
      * @param createdAt
      * @param namaPenjual
      * @param tanggalTransfer
      * @param idSeller
+     * @param jumlahTfPenerimaUang
      * @param namaPembeli
      * @param kapasitasBarang
+     * @param noRekPenerimaUang
      * @param alamatPembeli
      * @param id
      * @param kapasitas
@@ -122,12 +140,14 @@ public class Content {
      * @param tujuan
      * @param asal
      * @param hargaBagasi
+     * @param bankPenerimaUang
      * @param jenisBarangKirim
      * @param idBuyer
      * @param namaPengirimUang
      * @param tanggalTiba
+     * @param namaPenerimUang
      */
-    public Content(String createdAt, String updatedAt, long id, String namaPengirimUang, String bankPengirimUang, String tanggalTransfer, String uangSejumlah, String phonePenerimaBarang, String phonePengirimBarang, long idBuyer, long idSeller, String namaPembeli, String alamatPembeli, String alamatPenerima, String namaPenerima, String jenisBarangKirim, String kapasitasBarang, String namaPenjual, String asal, String tujuan, String tanggalBerangkat, String jamBerangkat, String tanggalTiba, String jamTiba, String kapasitas, String jenisBarang, String hargaBagasi) {
+    public Content(String createdAt, String updatedAt, long id, String namaPengirimUang, String bankPengirimUang, String tanggalTransfer, String uangSejumlah, String phonePenerimaBarang, String phonePengirimBarang, long idBuyer, long idSeller, String namaPenerimUang, String noRekPenerimaUang, String bankPenerimaUang, String jumlahTfPenerimaUang, String waktuPenerimaUang, String namaPembeli, String alamatPembeli, String alamatPenerima, String namaPenerima, String jenisBarangKirim, String kapasitasBarang, String namaPenjual, String asal, String tujuan, String tanggalBerangkat, String jamBerangkat, String tanggalTiba, String jamTiba, String kapasitas, String jenisBarang, String hargaBagasi) {
         super();
         this.createdAt = createdAt;
         this.updatedAt = updatedAt;
@@ -140,6 +160,11 @@ public class Content {
         this.phonePengirimBarang = phonePengirimBarang;
         this.idBuyer = idBuyer;
         this.idSeller = idSeller;
+        this.namaPenerimUang = namaPenerimUang;
+        this.noRekPenerimaUang = noRekPenerimaUang;
+        this.bankPenerimaUang = bankPenerimaUang;
+        this.jumlahTfPenerimaUang = jumlahTfPenerimaUang;
+        this.waktuPenerimaUang = waktuPenerimaUang;
         this.namaPembeli = namaPembeli;
         this.alamatPembeli = alamatPembeli;
         this.alamatPenerima = alamatPenerima;
@@ -244,6 +269,46 @@ public class Content {
 
     public void setIdSeller(long idSeller) {
         this.idSeller = idSeller;
+    }
+
+    public String getNamaPenerimUang() {
+        return namaPenerimUang;
+    }
+
+    public void setNamaPenerimUang(String namaPenerimUang) {
+        this.namaPenerimUang = namaPenerimUang;
+    }
+
+    public String getNoRekPenerimaUang() {
+        return noRekPenerimaUang;
+    }
+
+    public void setNoRekPenerimaUang(String noRekPenerimaUang) {
+        this.noRekPenerimaUang = noRekPenerimaUang;
+    }
+
+    public String getBankPenerimaUang() {
+        return bankPenerimaUang;
+    }
+
+    public void setBankPenerimaUang(String bankPenerimaUang) {
+        this.bankPenerimaUang = bankPenerimaUang;
+    }
+
+    public String getJumlahTfPenerimaUang() {
+        return jumlahTfPenerimaUang;
+    }
+
+    public void setJumlahTfPenerimaUang(String jumlahTfPenerimaUang) {
+        this.jumlahTfPenerimaUang = jumlahTfPenerimaUang;
+    }
+
+    public String getWaktuPenerimaUang() {
+        return waktuPenerimaUang;
+    }
+
+    public void setWaktuPenerimaUang(String waktuPenerimaUang) {
+        this.waktuPenerimaUang = waktuPenerimaUang;
     }
 
     public String getNamaPembeli() {

@@ -11,7 +11,6 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.cindodcindy.nitippembeli.R;
-import com.cindodcindy.nitippembeli.model.pojo_payments.pojo_get_payments.Content;
 
 import java.util.List;
 

@@ -4,7 +4,6 @@ import com.cindodcindy.nitippembeli.model.pojo_booking.pojo_get_booking.NitipGet
 import com.cindodcindy.nitippembeli.model.pojo_booking.pojo_post_booking.NitipPostBooking;
 import com.cindodcindy.nitippembeli.model.pojo_jasa.pojo_get_jasa.NitipGetAllLuggageAscRespon;
 import com.cindodcindy.nitippembeli.model.pojo_konfirm.pojo_get_konfirm.NitipGetConfirmRespon;
-import com.cindodcindy.nitippembeli.model.pojo_payments.pojo_get_payments.NitipGetPaymentRespon;
 import com.cindodcindy.nitippembeli.model.pojo_payments.pojo_post_payments.NitipPostPaymentRespon;
 import com.cindodcindy.nitippembeli.model.pojo_regis_login.pojo_login.NitipLoginRespon;
 import com.cindodcindy.nitippembeli.model.pojo_regis_login.pojo_regis.NitipRegisRespon;
