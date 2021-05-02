@@ -148,15 +148,16 @@ public class KonfirmDetailActivity extends AppCompatActivity {
         bundle.putString("jenisBr", textView_by_jenis_barang.getText().toString());
         bundle.putString("beratBr",textView_by_berat_brg.getText().toString());
 
-        bundle.putString("namaAkun",textView_sl_nama_penerima.getText().toString());
-        bundle.putString("noRek",textView_sl_no_rek.getText().toString());
-        bundle.putString("jenisBank",textView_sl_nama_bank.getText().toString());
-        bundle.putString("jumlahBayar",textView_sl_jumlah_harga.getText().toString());
+        // di komen krn mau bayar ke rek nitip
+        //bundle.putString("namaAkun",textView_sl_nama_penerima.getText().toString());
+        //bundle.putString("noRek",textView_sl_no_rek.getText().toString());
+        //bundle.putString("jenisBank",textView_sl_nama_bank.getText().toString());
+        //bundle.putString("jumlahBayar",textView_sl_jumlah_harga.getText().toString());
         bundle.putString("waktubayar", textView_sl_waktu_kirim.getText().toString());
 
-        bundle.putString("lokasiBertemu", textView_lokasi_jemput.getText().toString());
-        bundle.putString("jamAmbilBrg",textView_jam_jemput.getText().toString());
-        bundle.putString("estimasisampai", textView_estimasi.getText().toString());
+       // bundle.putString("lokasiBertemu", textView_lokasi_jemput.getText().toString());
+       // bundle.putString("jamAmbilBrg",textView_jam_jemput.getText().toString());
+       // bundle.putString("estimasisampai", textView_estimasi.getText().toString());
 
         Intent intent = new Intent(KonfirmDetailActivity.this, InputPaymentActivity.class);
         intent.putExtras(bundle);
