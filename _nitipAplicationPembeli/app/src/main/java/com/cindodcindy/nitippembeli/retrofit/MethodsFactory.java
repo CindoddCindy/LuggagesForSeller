@@ -3,6 +3,7 @@ package com.cindodcindy.nitippembeli.retrofit;
 import com.cindodcindy.nitippembeli.model.pojo_booking.pojo_get_booking.NitipGetBookingRespon;
 import com.cindodcindy.nitippembeli.model.pojo_booking.pojo_post_booking.NitipPostBooking;
 import com.cindodcindy.nitippembeli.model.pojo_jasa.pojo_get_jasa.NitipGetAllLuggageAscRespon;
+import com.cindodcindy.nitippembeli.model.pojo_konfirm.pojo_get_konfirm.NitipGetConfirmRespon;
 import com.cindodcindy.nitippembeli.model.pojo_regis_login.pojo_login.NitipLoginRespon;
 import com.cindodcindy.nitippembeli.model.pojo_regis_login.pojo_regis.NitipRegisRespon;
 import com.google.gson.JsonObject;
@@ -41,10 +42,6 @@ public interface MethodsFactory {
     @POST("/booking/users/{userId}/bookings")
     Call<NitipPostBooking> sendBookingToSeller(@Path("userId") Long user_id, @Body JsonObject body);
 
-
-
-
-
     @Headers({
             "Content-Type:application/json"
     })
@@ -56,5 +53,13 @@ public interface MethodsFactory {
     })
     @GET("booking/users/{userId}/bookings")
     Call<NitipGetBookingRespon> buyerGetOwnBookingList(@Path("userId") Long user_id);
+
+
+    @Headers({
+            "Content-Type:application/json"
+    })
+    @GET("confirmation/users/{userId}/confirmations")
+    Call<NitipGetConfirmRespon> buyerGetConfirmList(@Path("userId") Long user_id);
+
 
 }

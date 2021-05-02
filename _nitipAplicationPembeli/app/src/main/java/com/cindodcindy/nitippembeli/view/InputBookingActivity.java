@@ -277,7 +277,7 @@ public class InputBookingActivity extends AppCompatActivity {
 
 
         MethodsFactory methodsFactory =  RetrofitHandle.getRetrofitLink().create(MethodsFactory.class);
-        Call<NitipPostBooking> postBookingCall= methodsFactory.sendBookingToMe(idBuyer,jsonObject);
+        Call<NitipPostBooking> postBookingCall= methodsFactory.sendBookingToSeller(idBuyer,jsonObject);
         postBookingCall.enqueue(new Callback<NitipPostBooking>() {
             @Override
             public void onResponse(Call<NitipPostBooking> call, Response<NitipPostBooking> response) {
