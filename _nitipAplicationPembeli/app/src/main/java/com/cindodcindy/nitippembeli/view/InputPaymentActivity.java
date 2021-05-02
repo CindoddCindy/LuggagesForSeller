@@ -9,7 +9,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.cindodcindy.nitippembeli.R;
-import com.cindodcindy.nitippembeli.model.pojo_booking.pojo_post_booking.NitipPostBooking;
 import com.cindodcindy.nitippembeli.model.pojo_payments.pojo_post_payments.NitipPostPaymentRespon;
 import com.cindodcindy.nitippembeli.retrofit.MethodsFactory;
 import com.cindodcindy.nitippembeli.retrofit.RetrofitHandle;
@@ -168,6 +167,14 @@ public class InputPaymentActivity extends AppCompatActivity {
         String tfTanggalUangKirim=editText_tgal_tf.getText().toString();
         String tfJumlhaUangKirim=editText_jumlah_uang_bayar_bagasi.getText().toString();
 
+        String tfNamaPenerima=textView_sl_nama_penerima.getText().toString();
+        String tfNorekPenerima=textView_sl_no_rek.getText().toString();
+        String tfBankPenerima=textView_sl_nama_bank.getText().toString();
+        String tfJumlhaPenerima=textView_sl_jumlah_harga.getText().toString();
+        String tfWaktuBayarPenerima=textView_sl_waktu_kirim.getText().toString();
+
+
+
         String tfPhonePhonePenerima=editText_phone_penerima.getText().toString();
         String tfPhonePengirim=editText_phone_pengirim.getText().toString();
 
@@ -200,6 +207,13 @@ public class InputPaymentActivity extends AppCompatActivity {
 
         jsonObject.addProperty("idBuyer", idBuyer);
         jsonObject.addProperty("idSeller",idSeller);
+
+        jsonObject.addProperty("namaPenerimUang",tfNamaPenerima );
+        jsonObject.addProperty("noRekPenerimaUang",tfNorekPenerima);
+        jsonObject.addProperty("bankPenerimaUang", tfBankPenerima);
+        jsonObject.addProperty("jumlahTfPenerimaUang",tfJumlhaPenerima );
+        jsonObject.addProperty("waktuPenerimaUang", tfWaktuBayarPenerima);
+
 
 
         jsonObject.addProperty("namaPembeli",pengirimBy );
@@ -282,6 +296,14 @@ public class InputPaymentActivity extends AppCompatActivity {
         String tfTanggalUangKirim=editText_tgal_tf.getText().toString();
         String tfJumlhaUangKirim=editText_jumlah_uang_bayar_bagasi.getText().toString();
 
+        String tfNamaPenerima=textView_sl_nama_penerima.getText().toString();
+        String tfNorekPenerima=textView_sl_no_rek.getText().toString();
+        String tfBankPenerima=textView_sl_nama_bank.getText().toString();
+        String tfJumlhaPenerima=textView_sl_jumlah_harga.getText().toString();
+        String tfWaktuBayarPenerima=textView_sl_waktu_kirim.getText().toString();
+
+
+
         String tfPhonePhonePenerima=editText_phone_penerima.getText().toString();
         String tfPhonePengirim=editText_phone_pengirim.getText().toString();
 
@@ -314,6 +336,13 @@ public class InputPaymentActivity extends AppCompatActivity {
 
         jsonObject.addProperty("idBuyer", idBuyer);
         jsonObject.addProperty("idSeller",idSeller);
+
+        jsonObject.addProperty("namaPenerimUang",tfNamaPenerima );
+        jsonObject.addProperty("noRekPenerimaUang",tfNorekPenerima);
+        jsonObject.addProperty("bankPenerimaUang", tfBankPenerima);
+        jsonObject.addProperty("jumlahTfPenerimaUang",tfJumlhaPenerima );
+        jsonObject.addProperty("waktuPenerimaUang", tfWaktuBayarPenerima);
+
 
 
         jsonObject.addProperty("namaPembeli",pengirimBy );
@@ -376,6 +405,7 @@ public class InputPaymentActivity extends AppCompatActivity {
 
             }
         });
+
 
 
 
