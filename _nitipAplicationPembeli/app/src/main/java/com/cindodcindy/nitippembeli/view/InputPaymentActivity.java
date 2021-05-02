@@ -3,12 +3,16 @@ package com.cindodcindy.nitippembeli.view;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
 import com.cindodcindy.nitippembeli.R;
+import com.cindodcindy.nitippembeli.shared_pref.SpHandle;
 
 public class InputPaymentActivity extends AppCompatActivity {
+
+    private SpHandle spHandle;
 
     //data jasa
     private TextView textView_asal, textView_tujuan, textView_date_going, textView_date_arive,
@@ -31,6 +35,8 @@ public class InputPaymentActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_input_payment);
+
+        spHandle=new SpHandle(InputPaymentActivity.this);
 
         //data jasa
 
@@ -72,9 +78,30 @@ public class InputPaymentActivity extends AppCompatActivity {
 
         textView_btn_kirim_data_bayar_bagasi=findViewById(R.id.tv_pay_in_btn_bayar);
 
+        textView_btn_kirim_data_bayar_bagasi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if(editText_nama_tf.getText().toString().isEmpty()&&editText_bank_asal.getText().toString().isEmpty()&& editText_tgal_tf.getText().toString().isEmpty()&&editText_jumlah_uang_bayar_bagasi.getText().toString().isEmpty()){
+                    editText_nama_tf.setError("Field Kosaong");
+                    editText_bank_asal.setError("Field Kosaong");
+                    editText_tgal_tf.setError("Field Kosaong");
+                    editText_jumlah_uang_bayar_bagasi.setError("Field Kosaong");
+
+
+
+
+                }else {
+
+
+
+                }
+            }
+        });
+
     }
 
-    public void getPyamentFromConfirm(){
+    public void getPyamentFromConfirmDetail(){
 
         if(getIntent().getExtras()!=null) {
             /**
@@ -109,6 +136,10 @@ public class InputPaymentActivity extends AppCompatActivity {
 
         }
 
+
+    }
+
+    public void sendPayment(){
 
     }
 }
