@@ -80,6 +80,10 @@ public class PaymentAdapter extends RecyclerView.Adapter<PaymentAdapter.PaymentC
                 bundle.putString("tglTfPengirim", content.getTanggalTransfer());
                 bundle.putString("UangSejumlah", content.getUangSejumlah());
 
+                bundle.putString("phonePenerima", content.getPhonePenerimaBarang());
+                bundle.putString("phonePengirim", content.getPhonePengirimBarang());
+
+
                 Intent intent = new Intent(context, PaymentDetailActivity.class);
                 intent.putExtras(bundle);
                 context.startActivity(intent);

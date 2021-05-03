@@ -72,9 +72,10 @@ public class ConfirmationAdapter extends RecyclerView.Adapter<ConfirmationAdapte
                 bundle.putString("jenisBr", content.getJenisBarangKirim());
                 bundle.putString("beratBr",content.getKapasitasBarang());
 
-                bundle.putString("namaAkun",content.getNamaAkun());
-                bundle.putString("noRek",content.getNoRek());
-                bundle.putString("jenisBank",content.getJenisBank());
+                //nanati dihash code pake akun bank nitip
+                //bundle.putString("namaAkun",content.getNamaAkun());
+                //bundle.putString("noRek",content.getNoRek());
+                //bundle.putString("jenisBank",content.getJenisBank());
                 bundle.putString("jumlahBayar",content.getJumlahBayar());
                 bundle.putString("waktubayar", content.getWaktuPembayaran());
 

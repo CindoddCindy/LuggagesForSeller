@@ -15,6 +15,9 @@ public class PaymentDetailActivity extends AppCompatActivity {
     //data dibayar oleh
     private TextView textView_by_nama_penerima, textView_by_jumlah_uang, textView_by_tgl_tf,textView_by_nama_bank;
 
+    private TextView textView_phone_penerima;
+
+    private TextView textView_phone_pengirim;
 
     //data jasa
     private TextView textView_asal, textView_tujuan, textView_date_going, textView_date_arive,
@@ -42,6 +45,11 @@ public class PaymentDetailActivity extends AppCompatActivity {
         textView_by_jumlah_uang=findViewById(R.id.tv_by_pay_det_harga);
         textView_by_tgl_tf=findViewById(R.id.tv_by_pay_det_tgal_tf);
         textView_by_nama_bank=findViewById(R.id.tv_by_pay_det_nama_bank);
+
+        //phone
+
+        textView_phone_penerima=findViewById(R.id.tv_by_pay_det_phone_penerima_brg);
+        textView_phone_pengirim=findViewById(R.id.tv_by_pay_det_phone_pengirim);
 
         //data jasa
 
@@ -109,6 +117,9 @@ public class PaymentDetailActivity extends AppCompatActivity {
             textView_by_jumlah_uang.setText(bundle.getString("jumlahBayar"));
             textView_by_tgl_tf.setText(bundle.getString("waktubayar"));
             textView_by_nama_bank.setText(bundle.getString("jenisBank"));
+
+            textView_phone_penerima.setText(bundle.getString("phonePenerima"));
+            textView_phone_pengirim.setText(bundle.getString("phonePengirim"));
 
 
         }
