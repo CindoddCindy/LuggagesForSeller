@@ -978,7 +978,7 @@
                     android:textStyle="bold"
                     android:gravity="left"
                     android:drawablePadding="5dp"
-                    android:text="Nomor Telepopn Pengguna Jasa"
+                    android:text="Nama dan Nomor Telepopn Pengguna Jasa"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     >
@@ -1012,7 +1012,7 @@
                     android:textStyle="bold"
                     android:gravity="left"
                     android:drawablePadding="5dp"
-                    android:text="Nomor Telepon Penerima Barang"
+                    android:text="Nama dan Nomor Telepon Penerima Barang"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     >
