@@ -26,6 +26,8 @@ public class PaymentDirectActivity extends AppCompatActivity {
 
     private EditText editText_nama_tf, editText_bank_asal, editText_tgal_tf, editText_jumlah_uang_bayar_bagasi;
 
+    private EditText editText_phone_penerima, editText_phone_pengirim;
+
     private TextView textView_btn_kirim_data_bayar_bagasi;
 
 
@@ -55,7 +57,8 @@ public class PaymentDirectActivity extends AppCompatActivity {
         editText_by_penerima=findViewById(R.id.et_dir_pay_book_in_by_nama_penerima);
         editText_by_jenis_barang=findViewById(R.id.et_dir_pay_book_in_by_jenis_barang);
         editText_by_berat_brg=findViewById(R.id.et_dir_pay_book_in_by_berat_kg);
-
+        editText_phone_penerima=findViewById(R.id.et_dir_pay_book_in_by_phone_penerima);
+        editText_by_pengirim=findViewById(R.id.et_dir_pay_book_in_by_phone_pengirim);
         //data_bayar jasa bagasai
 
         textView_sl_nama_penerima=findViewById(R.id.tv_dir_pay_in_tf_nama_akun_penerima);
