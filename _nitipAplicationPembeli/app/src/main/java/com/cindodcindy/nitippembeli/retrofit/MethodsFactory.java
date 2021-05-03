@@ -2,6 +2,7 @@ package com.cindodcindy.nitippembeli.retrofit;
 
 import com.cindodcindy.nitippembeli.model.pojo_booking.pojo_get_booking.NitipGetBookingRespon;
 import com.cindodcindy.nitippembeli.model.pojo_booking.pojo_post_booking.NitipPostBooking;
+import com.cindodcindy.nitippembeli.model.pojo_done.pojo_get_done.NitipGetDoneRespon;
 import com.cindodcindy.nitippembeli.model.pojo_jasa.pojo_get_jasa.NitipGetAllLuggageAscRespon;
 import com.cindodcindy.nitippembeli.model.pojo_konfirm.pojo_get_konfirm.NitipGetConfirmRespon;
 import com.cindodcindy.nitippembeli.model.pojo_payments.pojo_get_payments.NitipGetPaymentRespon;
@@ -67,7 +68,7 @@ public interface MethodsFactory {
             "Content-Type:application/json"
     })
     @POST("payment/users/{userId}/payments")
-    Call<NitipPostPaymentRespon> sendPaymentToSeller(@Path("userId") Long user_id, @Body JsonObject body);
+    Call<NitipPostPaymentRespon> sendPaymentToAdmin(@Path("userId") Long user_id, @Body JsonObject body);
 
     @Headers({
             "Content-Type:application/json"
@@ -80,6 +81,14 @@ public interface MethodsFactory {
     })
     @GET("payment/users/{userId}/payments")
     Call<NitipGetPaymentRespon> buyerGetPaymentList(@Path("userId") Long user_id);
+
+
+    @Headers({
+            "Content-Type:application/json"
+    })
+    @GET("done/users/{userId}/dones")
+    Call<NitipGetDoneRespon> buyerGetDoneList(@Path("userId") Long user_id);
+
 
 
 

@@ -368,7 +368,7 @@ public class InputPaymentActivity extends AppCompatActivity {
 
 
         MethodsFactory methodsFactory =  RetrofitHandle.getRetrofitLink().create(MethodsFactory.class);
-        Call<NitipPostPaymentRespon> postPaymentResponCall= methodsFactory.sendPaymentToMe(idBuyer,jsonObject);
+        Call<NitipPostPaymentRespon> postPaymentResponCall= methodsFactory.sendPaymentToAdmin(idBuyer,jsonObject);
         postPaymentResponCall.enqueue(new Callback<NitipPostPaymentRespon>() {
             @Override
             public void onResponse(Call<NitipPostPaymentRespon> call, Response<NitipPostPaymentRespon> response) {
