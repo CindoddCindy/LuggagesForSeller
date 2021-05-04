@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.cindodcindy.nitippembeli.R;
 import com.cindodcindy.nitippembeli.model.pojo_done.pojo_get_done.Content;
 import com.cindodcindy.nitippembeli.view.BookingDetailActivity;
+import com.cindodcindy.nitippembeli.view.DoneDetailActivity;
 
 import java.util.List;
 
@@ -72,7 +73,7 @@ public class DoneAdapter extends RecyclerView.Adapter<DoneAdapter.DoneChild> {
                 bundle.putString("namaPenerimaBarang",content.getDiterimaOleh());
                 bundle.putString("lokasiBarangDiterima",content.getLokasiBarangDiterima());
 
-                Intent intent = new Intent(context, BookingDetailActivity.class);
+                Intent intent = new Intent(context, DoneDetailActivity.class);
                 intent.putExtras(bundle);
                 context.startActivity(intent);
 
