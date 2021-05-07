@@ -3,6 +3,7 @@ package com.cindodcindy.nitippembeli.view;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -76,6 +77,42 @@ public class PaymentDirectActivity extends AppCompatActivity {
         editText_jumlah_uang_bayar_bagasi=findViewById(R.id.et_dir_pay_in_by_tf_jumlah_uang);
 
         textView_btn_kirim_data_bayar_bagasi=findViewById(R.id.tv_dir_pay_in_btn_bayar);
+
+        textView_btn_kirim_data_bayar_bagasi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(editText_by_asal.getText().toString().isEmpty()&&editText_by_tujuan.getText().toString().isEmpty()&&
+                        editText_by_pengirim.getText().toString().isEmpty()&&editText_by_penerima.getText().toString().isEmpty()
+                        &&editText_by_jenis_barang.getText().toString().isEmpty()&&editText_by_berat_brg.getText().toString().isEmpty()&&
+                editText_nama_tf.getText().toString().isEmpty()&&editText_bank_asal.getText().toString().isEmpty()&& editText_tgal_tf.getText().toString().isEmpty()&&editText_jumlah_uang_bayar_bagasi.getText().toString().isEmpty()
+
+                ){
+                    editText_by_asal.setError("nama belum diisi");
+                    editText_by_tujuan.setError("email belum diisi");
+                    editText_by_pengirim.setError("nomor telepon belum diisi");
+                    editText_by_penerima.setError("password belum diisi");
+                    editText_by_jenis_barang.setError("nomor telepon belum diisi");
+                    editText_by_berat_brg.setError("password belum diisi");
+                    editText_nama_tf.setError("Field Kosong");
+                    editText_bank_asal.setError("Field Kosong");
+                    editText_tgal_tf.setError("Field Kosong");
+                    editText_jumlah_uang_bayar_bagasi.setError("Field Kosong");
+
+
+
+
+                }else {
+
+
+
+                }
+
+            }
+        });
+
+    }
+
+    public  void getDataLuggageAv(){
 
     }
 }
